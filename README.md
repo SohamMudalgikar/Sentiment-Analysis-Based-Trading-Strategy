@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the **Sentiment-Based Trading Strategy** project! This initiative merges the realms of sentiment analysis and financial trading to create a data-driven strategy aimed at enhancing investment decisions. By analyzing public sentiment from Twitter and integrating it with historical stock data, this project generates actionable buy and sell signals intended to improve trading accuracy and profitability.
+Welcome to the **Sentiment-Based Trading Strategy** project! In this project we will try to merge sentiment analysis with financial trading to create strategy aimed at making trading decisions. We will be analyzing public sentiment from Twitter and integrating it with historical stock data, in this project our aim is to generates actionable buy and sell signals intended to improve trading accuracy and hopefully profit :).
 
 ## Project Overview
 
@@ -12,15 +12,15 @@ The primary goal of this project is to develop a trading strategy that leverages
 
 ### Strategy
 
-The trading strategy is constructed by combining sentiment analysis with traditional technical indicators. Here's a step-by-step breakdown of how the strategy operates:
+Here is outline of how the strategy operates:
 
 1. **Data Collection**:
    - **Stock Data**: Historical stock price data is retrieved using the Yahoo Finance API (`yfinance`). This includes daily closing prices, which are essential for calculating technical indicators like moving averages.
-   - **Social Media Data**: Tweets mentioning the target stock ticker are fetched using the Twitter API via the `Tweepy` library. These tweets provide real-time sentiment data from the public.
+   - **Social Media Data**: Tweets mentioning the target stock ticker are fetched using the Twitter API via the `Tweepy` library. 
 
 2. **Sentiment Analysis**:
    - Each collected tweet is analyzed using the `TextBlob` library to determine its sentiment polarity, which ranges from -1 (very negative) to +1 (very positive).
-   - The sentiment scores of all tweets within a specific timeframe (e.g., daily) are aggregated to compute an average sentiment score. This score reflects the overall public sentiment towards the stock on that day.
+   - The sentiment scores of all tweets within a specific timeframe (e.g., daily) are aggregated to compute an average sentiment score. That is this score is a proxy for overall sentiment towards the stock on that day.
 
 3. **Technical Indicators**:
    - **Moving Averages**: Two moving averages are calculated:
